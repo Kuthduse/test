@@ -15,7 +15,80 @@ const reryx = 'ryx';
 const recox = 'cox';
 
 app.get("/", function(req, res) {
-  res.send("Hello world!");
+  const html = `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Popular Websites Navigation</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin-top: 10%;
+                background-color: #f4f4f4;
+                padding: 20px;
+            }
+            h1 {
+                color: #333;
+            }
+            .links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                margin-top: 30px;
+            }
+            a {
+                padding: 12px 20px;
+                font-size: 16px;
+                color: white;
+                background-color: #007BFF;
+                text-decoration: none;
+                border-radius: 5px;
+                min-width: 120px;
+            }
+            a:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>🌐 Popular Websites Navigation</h1>
+        <div class="links">
+            <a href="https://www.google.com" target="_blank">Google</a>
+            <a href="https://www.youtube.com" target="_blank">YouTube</a>
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="https://www.docker.com" target="_blank">Docker</a>
+            <a href="https://twitter.com" target="_blank">X (Twitter)</a>
+            <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+            <a href="https://stackoverflow.com" target="_blank">Stack Overflow</a>
+            <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
+            <a href="https://www.wikipedia.org" target="_blank">Wikipedia</a>
+            <a href="https://www.reddit.com" target="_blank">Reddit</a>
+            <a href="https://news.ycombinator.com" target="_blank">Hacker News</a>
+            <a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a>
+            <a href="https://www.w3schools.com" target="_blank">W3Schools</a>
+            <a href="https://www.cloudflare.com/learning/" target="_blank">Cloudflare Learning</a>
+            <a href="https://aws.amazon.com/documentation/" target="_blank">AWS Docs</a>
+            <a href="https://learn.microsoft.com/en-us/" target="_blank">Microsoft Learn</a>
+            <a href="https://firebase.google.com/docs" target="_blank">Firebase Docs</a>
+            <a href="https://www.python.org/doc/" target="_blank">Python Docs</a>
+            <a href="https://developer.apple.com/documentation/" target="_blank">Apple Dev Docs</a>
+            <a href="https://www.netflix.com" target="_blank">Netflix</a>
+            <a href="https://www.spotify.com" target="_blank">Spotify</a>
+            <a href="https://www.notion.so" target="_blank">Notion</a>
+            <a href="https://www.canva.com" target="_blank">Canva</a>
+            <a href="https://www.zoom.us" target="_blank">Zoom</a>
+            <a href="https://slack.com" target="_blank">Slack</a>
+            <a href="https://www.airbnb.com" target="_blank">Airbnb</a>
+            <a href="https://www.aliexpress.com" target="_blank">AliExpress</a>
+        </div>
+    </body>
+    </html>
+  `;
+  res.send(html);
 });
 
 const metaInfo = execSync(
