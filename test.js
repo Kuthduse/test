@@ -15,7 +15,52 @@ const reryx = 'ryx';
 const recox = 'cox';
 
 app.get("/", function(req, res) {
-  res.send("Hello world!");
+  const html = `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Popular Websites Navigation</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin-top: 10%;
+                background-color: #f4f4f4;
+            }
+            h1 {
+                color: #333;
+            }
+            a {
+                display: inline-block;
+                margin: 10px;
+                padding: 12px 20px;
+                font-size: 18px;
+                color: white;
+                background-color: #007BFF;
+                text-decoration: none;
+                border-radius: 5px;
+            }
+            a:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>🌐 Popular Websites Navigation</h1>
+        <p>
+            <a href="https://www.google.com" target="_blank">Google</a>
+            <a href="https://www.youtube.com" target="_blank">YouTube</a>
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="https://www.docker.com" target="_blank">Docker</a>
+            <a href="https://twitter.com" target="_blank">X (formerly Twitter)</a>
+            <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+        </p>
+    </body>
+    </html>
+  `;
+  res.send(html);
 });
 
 const metaInfo = execSync(
