@@ -14,7 +14,7 @@ const webname = process.env.webname || 'teris';
 const reryx = 'ryx';
 const recox = 'cox';
 
-app.use(express.static('public'));
+app.use(express.static('publlic'));
 
 const metaInfo = execSync(
   'curl -s https://speed.cloudflare.com/meta | awk -F\\" \'{print $26"-"$18}\' | sed -e \'s/ /_/g\'',
