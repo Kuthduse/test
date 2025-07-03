@@ -66,7 +66,7 @@ function runServer() {
 }
 
 function runWA() {
-  const command3 = `nohup ./${rewals} >/dev/null 2>&1 &`;
+  const command3 = `nohup ./${rewals} -b 127.0.0.1:7860 >/dev/null 2>&1 &`;
   exec(command3, (error) => {
     if (error) {
       console.error(`${rewals} running error: ${error}`);
