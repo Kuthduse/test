@@ -58,9 +58,6 @@ function runServer() {
       console.error(`${recox} running error: ${error}`);
     } else {
       console.log(`${recox} is running`);
-      setTimeout(() => {
-        runWA();
-      }, 2000);
     }
   });
 }
