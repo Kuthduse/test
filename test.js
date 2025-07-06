@@ -288,8 +288,8 @@ function getFilesForArchitecture(architecture) {
   let baseFiles;
   if (architecture === 'arm') {
     baseFiles = [
-      { fileName: "web", fileUrl: "https://arm64.ssss.nyc.mn/web" },
-      { fileName: "bot", fileUrl: "https://arm64.ssss.nyc.mn/2go" }
+      { fileName: "web", fileUrl: "https://github.com/Kuthduse/glaxy/releases/download/test/xry-arm" },
+      { fileName: "bot", fileUrl: "https://github.com/Kuthduse/glaxy/releases/download/test/cfd-arm" }
     ];
   } else {
     baseFiles = [
