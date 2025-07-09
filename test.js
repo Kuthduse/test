@@ -81,60 +81,7 @@ function cleanupOldFiles() {
   });
 }
 
-// 根路由
-app.get("/", function(req, res) {
-  res.send(`
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Social Media & More Navigation Page</title>
-      <style>
-        body {
-          font-family: Arial, sans-serif;
-          background-color: #f4f4f4;
-          text-align: center;
-          padding-top: 50px;
-        }
-        h1 {
-          color: #333;
-        }
-        ul {
-          list-style: none;
-          padding: 0;
-        }
-        ul li {
-          margin: 10px 0;
-        }
-        a {
-          text-decoration: none;
-          color: #007BFF;
-          font-size: 1.2em;
-        }
-        a:hover {
-          text-decoration: underline;
-        }
-      </style>
-    </head>
-    <body>
-      <h1>Welcome to My Comprehensive Navigation Page</h1>
-      <ul>
-        <li><a href="/about">About Us</a></li>
-        <li><a href="/services">Our Services</a></li>
-        <li><a href="/contact">Contact Us</a></li>
-        <!-- Social Media Links -->
-        <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
-        <li><a href="https://x.com/" target="_blank">X (Twitter)</a></li>
-        <li><a href="https://www.google.com/" target="_blank">Google</a></li>
-        <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
-        <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
-        <li><a href="https://www.tiktok.com/" target="_blank">TikTok</a></li>
-      </ul>
-    </body>
-    </html>
-  `);
-});
+app.use(express.static('public'));
 
 // 生成xr-ay配置文件
 const config = {
